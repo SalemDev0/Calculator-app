@@ -350,7 +350,6 @@ button:active{
         display: grid;
         grid-template-columns: repeat(4, 89px);
         grid-template-rows: repeat(5, 1fr);
-        grid-column-gap: px;
         grid-row-gap: 8px;
         margin: 10px 15px;
       }
