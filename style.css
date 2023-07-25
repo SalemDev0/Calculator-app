@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Rubik+Pixels&display=swap');
+
+
+*,*::before,*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #3A4663;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.5s;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.head h1{
+    color: #fff;
+}
+
+.num{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.theme-controll{
+    display: flex;
+    align-items: center;
+}
+
+.theme-controll p{
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0px -20px;
+    color: #fff;
+    
+
+}
+
+.screen{
+    width: 540px;
+    display: flex;
+    align-items: center;
+}
+
+.scree-1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 128px;
+    text-align: right;
+    font-family: 'League Spartan';
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.933px;
+    border-radius: 10px;
+    background: #181F33;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+
+}
+
+.scree-2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    padding: 16px;
+    font-size: 20px;
+    color: #a8a49fd2;
+}
+
+.theme-btnn{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px -10px;
+}
+
+.theme-btnn p {
+    position: relative;
+    top: -18px;
+    left: 56px;
+    margin: 0 7.7px;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+}
+.shape{
+    width: 71px;
+    height: 26px;
+    border-radius: 13px;
+    background-color: #242D44;
+    color: #fff;
+    position: relative;
+    display: flex;
+    transition: all 0.37s;
+}
+
+.circle{
+    margin: 5.5px;
+    height: 16px;
+    width: 16px;
+    background-color: #D03F2F;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s;
+    transform: translateX(20px);
+}
+
+.btnns{
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    margin: 10px 20px;
+}
+
+.calc-body{
+    width:540px;
+    border-radius: 10px;
+    background: #242D44;
+}
+
+button{
+    width: 101px;
+    height: 64px;
+    border-radius: 10px;
+    padding: 15px;
+    background: #EAE3DC;
+    box-shadow: 0px -4px 0px 0px #B3A497 inset;
+    border: none;
+    margin:15px 13px;
+    color: #434A59;
+    text-align: center;
+    font-family: League Spartan;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.667px;
+    transition: all 0.43s;
+    cursor: pointer;
+
+}
+button:active{
+    box-shadow: 0px 0px 0px 0px #B3A497 inset;
+    transform: translateY(1px);
+    background-color: #fff;
+}
+
+.reset-btn,.equal-btn{
+    font-size: 28px;
+    width: 227px;
+    color: #fff;
+}
+
+.reset-btn{
+    background: #647198;
+    box-shadow: 0px -4px 0px 0px #414E73 inset;
+    color: #fff;
+    font-size: 28px;
+}
+
+.del{
+    background: #647198;
+    box-shadow: 0px -4px 0px 0px #414E73 inset;
+    color: #fff;
+    font-size: 28px;
+}
+
+.equal-btn{
+    background: #D03F2F;
+    box-shadow: 0px -4px 0px 0px #93261A inset;
+}
+
+
+
+
+
+/* start theme-1 */
+body.active1{
+    background-color: #3A4663;
+}
+
+.active1 .circle{
+    transform: translateX(0px);
+    background-color: #D03F2F;
+}
+
+.active1 .reset-btn,.del{
+    background: #647198;
+}
+
+.active1 .reset-btn{
+    background: #647198;
+    box-shadow: 0px -4px 0px 0px #414E73 inset;
+    color: #fff;
+    font-size: 28px;
+}
+/* End of theme-1 */
+
+
+/* start theme-2 */
+body.active2{
+    background: #E6E6E6;
+}
+
+.active2 .circle{
+    transform: translateX(20px);
+    background-color: #C85402;
+}
+
+.active2 .shape{
+    background: #D2CDCD;
+}
+
+.active2 .head h1{
+    color: black;
+}
+
+.active2 .theme-controll p{
+    color: #181F33;
+}
+
+.active2 .theme-btnn p {
+    color: #181F33;
+}
+
+.active2 .scree-1{
+    background-color: #eee;
+    color: #36362C;
+}
+
+.active2 .calc-body{
+background: #D2CDCD;
+}
+
+.active2 .del,.reset-btn{
+    border-radius: 10px;
+    background-color: #378187;
+    box-shadow: 0px -4px 0px 0px #1B6066 inset;
+}
+
+.active2 .equal-btn{
+    background: #C85402;
+    box-shadow: 0px -4px 0px 0px #873901 inset;
+}
+
+
+/* End of theme-2 */
+
+body.active3{
+    background-image: url(images/pxsprite-space.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;                    
+}
+
+.active3 .circle{
+    transform: translateX(40px);
+    background-color: #EC4899;
+}
+
+.active3 .theme-btnn p{
+    top: -20px;
+    left: 59px;
+    font-size: 12px;
+}
+
+.active3 .theme-controll p{
+    margin-left: 5px;
+    font-size: 10px;
+}
+
+.active3 .shape{
+    background-color: #4C0519;
+}
+
+.active3 .calc-body{
+    background-color: #172554;
+}
+
+.active3 .scree-1{
+    background-color: #0b163a;
+}
+
+.active3 .del{
+    background-color: #BE185D;
+    box-shadow: 0px -4px 0px 0px #4C0519 inset;
+}
+
+.active3 .reset-btn{
+    background-color: #BE185D;
+    box-shadow: 0px -4px 0px 0px #4C0519 inset;
+}
+
+.active3 button{
+    background-color: #F0FDFA;
+    box-shadow: 0px -4px 0px 0px #93C5FD inset;
+}
+
+.active3 .equal-btn{
+    background-color: #F472B6;
+    box-shadow: 0px -4px 0px 0px #BE185D inset;
+}
+
+
+button:active{
+    box-shadow: 0px 0px 0px 0px #BE185D inset;
+    transform: translateY(1px);
+    background-color: #fff;
+}
+
+
+@media screen and (max-width:375px) {
+    .container{
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .screen{
+        width: 100%;
+    }
+
+    .calc-body{
+        width: 100%;
+    }
+
+    .btnns {
+        display: grid;
+        grid-template-columns: repeat(4, 89px);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: px;
+        grid-row-gap: 8px;
+        margin: 10px 15px;
+      }
+
+    .equal-btn{
+        width: 170px;
+        grid-area: 5 / 3 / 6 / 5; 
+    }
+
+    .reset-btn{
+        width: 170px;
+        grid-area: 5 / 1 / 6 / 3;
+    }
+
+    button{
+        width: 79px;
+        height: 70px;
+        border-radius: 10px;
+        padding: 5px;
+        margin:15px 0px;
+    
+    }
+
+    body.active3{
+        background-image: url(images/pxsprite-space.gif);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;                    
+    }
+    
+
+    
+
+}
